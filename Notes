@@ -1,0 +1,143 @@
+Procedural Programming/Procedural Paradigm
+C Programming
+-------------------------------------------------------------------------------
+Object Oriented Programming/Object Oriented Paradigm
+C++
+
+Why to use it?
+Real world Objects with their functionalities.
+
+
+create template of real world objects------Class
+create a object of the template------> instance of Class/object of the class
+	Any number of objects can be created.
+         Comparision of objects is possible with OOPs which was not possible with Procedural Paradigm
+       
+What is OOP?
+SOLID, KISS and DRY------> 
+S--- Single Responsibility Principle:(SRP)
+ Every class should have a single responsibility so that the class is self explanatory.
+For example: If you have a Product Class, has properties/fields to accept and display data it should only have the code of accepting the data & displaying the data.
+It should not contain logic to calculatePrice,calculateDiscount,etc, It should be done in other class.
+
+O--Open/Closed Principle(OCP)--  (Open for Extension, Closed for Modification)
+Every class can be inherited by the other class ie open for Extension
+but modification of a class once written is not allowed ie. Closed for Modification
+
+
+L---Liskow Substitution Principle:(LSP)
+Subtypes should be substitutable for their base types without altering the correctness of the program.
+ie. A Child class can be used instead of Parent class.
+
+I---Interface Segregation Principle(ISP)----
+Client/Program class should not be forced to depend on methods they donot use.
+Interfaces must be small and very specific.
+
+D---Dependency Inversion Principle (DIP)
+High level modules should not depend on low level modules: both should depend on abstractions.
+Abstractions should not depend on details, details should depend on abstractions.
+For example:
+abstract class INotificationServices
+{
+bool SentNotificationAlert();
+
+}
+
+abstract class MessageService:INotificationServices
+{
+
+bool SentNotificationAlert()
+{
+SentMessage=true;
+}
+
+
+}
+
+
+class EmailMessageSevice:MessageService
+{
+
+}
+
+class WhatsAppMessageService:MessageService
+{
+
+}
+
+
+Pillars of OOPS:
+Major :
+1) Abstraction: Show relevant data and hide irrelevant  data(Access Specifiers)
+2) Inheritance: Parent Child Relationship, reusability of code.(Properties,Methods)
+3) Polymorphism: Many forms (Overloading and OverRiding)
+4) Encapsulation: Wrap the relevant data members (class)
+
+Minor:
+Typing: type casting and conversion
+Persistence: writing the object state to a file/memory. Save that data of that moment of time.
+
+-------------------------------------------------------------
+
+1) Create a Console App
+2) create a class library
+3) right click solution ---> project dependency ---->App depends  on Logic
+4) Build Class Libray
+5) Add reference of library in console App (Dependencies right click in app and add project reference)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class SMSMessageService:MessageService
+{
+
+
+}
+
+
+
+---------------------------
+K---Keep
+I---it
+S---Simple,
+S----Stupid
+
+Keep all the code very simple. It may look stupid to write every step of logic independently but it is necessary.
+----------------------------
+
+D--Donot
+R--Repeat 
+Y--Yourself
+
+If a code lines is required very frequently, create a method of those  lines and call the method wherever needed,  don't repeat the code
+
+
+
+
+
