@@ -1,8 +1,43 @@
 ﻿using LogicLibrary;
+using System.Text;
 internal class Program
 {
     private static void Main(string[] args)
     {
+        StringWorking obj=new StringWorking();
+        string s=obj.FindSubstring("Hexaware", 3);
+        Console.WriteLine(s);
+        obj.AppendString("Hexaware", "Technologies");
+
+        StringOperationVersion2 v2=new StringOperationVersion2();   
+        int i=v2.LengthOfString("Hello");
+        Console.WriteLine(i);
+        
+        DemoOnWorkingWithStringBuilder demo=new DemoOnWorkingWithStringBuilder();
+        demo.AppendString("Welcome","To Hexaware");
+        Console.WriteLine("----------------------------------");
+
+        StringBuilder sb = new StringBuilder();
+        sb.Append("Hello");
+        sb.AppendLine("World");
+        sb.AppendLine("Hello C#");
+        Console.WriteLine(sb);
+
+        Console.WriteLine("-----------------------------");
+        StringBuilder strAmt=new StringBuilder("The total amt=");
+        strAmt.AppendFormat("{0:C}", 250);
+        Console.WriteLine(strAmt);
+
+        Console.WriteLine("======================================");
+        demo.InsertString("Hello Hexaware","C#");
+
+        implementAll obj1=new implementAll();
+        Console.WriteLine(obj1.FindAscii('A'));
+        obj1.Print();
+        decimal output=obj1.ConcatNumbers(5444444.333m, 123123.244m);
+        Console.WriteLine(output);
+
+
         //Login obj=new Login();
         //Console.WriteLine("Enter Username");
         //obj.UserName = Console.ReadLine();
@@ -11,15 +46,15 @@ internal class Program
 
         //LoginAndPlaceOrder();
        
-        Person p=new Person("Tina","Someone,",new DateTime(2000, 01, 11));
-        p.DisplayEmpDetails();
+        //Person p=new Person("Tina","Someone,",new DateTime(2000, 01, 11));
+        //p.DisplayEmpDetails();
 
-        Person p1 = new Person();
-        p1.DisplayEmpDetails();
+        //Person p1 = new Person();
+        //p1.DisplayEmpDetails();
 
         Console.WriteLine("-------------------------------------------");
       //  Employee emp = new Employee("", "", new DateTime(), 123, 10);
-        Employee emp = new Employee("Paresh", "RRRR", new DateTime(2000, 01, 11), 123, 10);
+        //Employee emp = new Employee("Tina", "Somename", new DateTime(2000, 01, 11), 123, 10);
         //Person p=new Person();
         //p.FirstName = "Tina";
         //p.LastName = "SomeName";
@@ -27,10 +62,10 @@ internal class Program
         
 
         //Employee emp=new Employee();
-        emp.Empid = 123;
-        emp.Deptno = 10;
+        //emp.Empid = 123;
+        //emp.Deptno = 10;
         
-        emp.DisplayEmpDetails();
+        //emp.DisplayEmpDetails();
 
 
 
